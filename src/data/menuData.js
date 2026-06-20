@@ -304,8 +304,8 @@ export const menuItems = [
 export const categories = [
   { key: 'all', label: 'All Items', icon: '🍽️' },
   { key: 'merienda', label: 'Merienda', icon: '🍢' },
-  { key: 'ulam', label: 'Ulam (₱80)', icon: '🍚' },
-  { key: 'gulay', label: 'Gulay (₱40)', icon: '🥬' },
+  { key: 'ulam', label: 'Ulam', icon: '🍚' },
+  { key: 'gulay', label: 'Gulay', icon: '🥬' },
   { key: 'group', label: 'Group Meals', icon: '👥' },
   { key: 'party', label: 'Party / Catering', icon: '🎉' },
 ];
@@ -319,13 +319,13 @@ export const categoryInfo = {
   },
   ulam: {
     title: 'Ulam / Rice Meals',
-    subtitle: 'Hearty Filipino ulam served with rice — only ₱80 each!',
+    subtitle: 'Hearty Filipino ulam served with rice',
     icon: '🍚',
     gradient: 'from-terracotta to-terracotta-light',
   },
   gulay: {
     title: 'Gulay / Vegetables',
-    subtitle: 'Fresh and healthy vegetable dishes — only ₱40 each!',
+    subtitle: 'Fresh and healthy vegetable dishes',
     icon: '🥬',
     gradient: 'from-green-500 to-emerald-600',
   },
