@@ -182,6 +182,42 @@ export default function Contact() {
             </form>
           </div>
         </div>
+
+        {/* Map Section */}
+        <div className={`mt-16 transition-all duration-700 ${
+          inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
+          <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100">
+            <div className="p-6 md:p-8 bg-gradient-to-r from-banana/5 to-gold/5 border-b border-gray-100">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-400 to-pink-500 flex items-center justify-center text-white">
+                  <i className="fas fa-map-marker-alt text-sm"></i>
+                </div>
+                <div>
+                  <h4 className="font-heading font-bold text-charcoal">Find Us Here</h4>
+                  <p className="text-xs text-charcoal/50">Technopark Square, Nuvali Rd, Biñan, Laguna</p>
+                </div>
+                <a
+                  href="https://www.google.com/maps/search/Technopark+Square+Nuvali+Rd+Bi%C3%B1an+Laguna"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-auto inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-banana to-gold text-white text-sm font-semibold rounded-xl hover:shadow-lg hover:shadow-banana/30 hover:-translate-y-0.5 transition-all"
+                >
+                  <i className="fas fa-directions"></i> Get Directions
+                </a>
+              </div>
+            </div>
+            <div className="w-full" style={{ height: '400px' }}>
+              <iframe
+                title="Ceny's Meryenda Location"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=121.081%2C14.315%2C121.091%2C14.325&layer=mapnik&marker=14.32%2C121.086"
+                className="w-full h-full border-0"
+                loading="lazy"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
