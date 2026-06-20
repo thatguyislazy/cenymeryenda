@@ -3,7 +3,7 @@ import useInView from '../hooks/useInView';
 import SectionHeader from './SectionHeader';
 
 const infoCards = [
-  { icon: 'fas fa-location-dot', title: 'Location', desc: 'Visit our meryenda corner for dine-in or pick-up', color: 'from-red-400 to-pink-500' },
+  { icon: 'fas fa-location-dot', title: 'Location', desc: 'Technopark Square, Nuvali Rd, Biñan, Laguna', color: 'from-red-400 to-pink-500' },
   { icon: 'fas fa-clock', title: 'Operating Hours', desc: 'Monday - Sunday: 6:00 AM - 8:00 PM', color: 'from-blue-400 to-indigo-500' },
   { icon: 'fas fa-phone', title: 'Phone', desc: 'Contact us for orders and inquiries', color: 'from-green-400 to-emerald-500' },
 ];

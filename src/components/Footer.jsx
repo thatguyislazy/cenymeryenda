@@ -41,10 +41,14 @@ export default function Footer() {
                 <span className="text-gold text-sm font-medium">Meryenda Corner</span>
               </div>
             </div>
-            <p className="text-sm leading-relaxed mb-6 text-white/50">
+            <p className="text-sm leading-relaxed mb-4 text-white/50">
               Serving authentic Filipino merienda with love. Your trusted source
               for delicious, affordable, and home-made snacks since day one.
             </p>
+            <div className="flex items-start gap-2 mb-6 text-white/45 text-sm">
+              <i className="fas fa-location-dot text-gold mt-0.5"></i>
+              <span>Technopark Square, Nuvali Rd, Biñan, Laguna</span>
+            </div>
             <div className="flex gap-3">
               {[
                 { icon: 'fab fa-facebook-f', href: 'https://www.facebook.com/cenysmeryendacorner' },
