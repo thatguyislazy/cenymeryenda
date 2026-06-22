@@ -302,7 +302,6 @@ export const menuItems = [
 ];
 
 export const categories = [
-  { key: 'all', label: 'All Items', icon: '🍽️' },
   { key: 'merienda', label: 'Merienda', icon: '🍢' },
   { key: 'ulam', label: 'Ulam', icon: '🍚' },
   { key: 'gulay', label: 'Gulay', icon: '🥬' },

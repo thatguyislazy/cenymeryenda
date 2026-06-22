@@ -37,24 +37,9 @@ function CategoryBanner({ catKey, info, count }) {
 }
 
 export default function Menu() {
-  const [filter, setFilter] = useState('all');
+  const [filter, setFilter] = useState(categories[0].key);
 
-  const filtered =
-    filter === 'all'
-      ? menuItems
-      : menuItems.filter((i) => i.category === filter);
-
-  // Group items by category when showing all
-  const grouped =
-    filter === 'all'
-      ? categories
-          .filter((c) => c.key !== 'all')
-          .map((c) => ({
-            ...c,
-            items: menuItems.filter((i) => i.category === c.key),
-          }))
-          .filter((g) => g.items.length > 0)
-      : null;
+  const filtered = menuItems.filter((i) => i.category === filter);
 
   return (
     <section id="menu" className="py-24 bg-cream relative overflow-hidden">
@@ -93,41 +78,18 @@ export default function Menu() {
           ))}
         </div>
 
-        {/* Grouped view (All Items) */}
-        {grouped ? (
-          <div className="space-y-12">
-            {grouped.map((group) => (
-              <div key={group.key}>
-                <CategoryBanner
-                  catKey={group.key}
-                  info={categoryInfo[group.key]}
-                  count={group.items.length}
-                />
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                  {group.items.map((item, i) => (
-                    <MenuCard key={item.id} item={item} index={i} />
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        ) : (
-          /* Filtered view */
-          <>
-            {filter !== 'all' && categoryInfo[filter] && (
-              <CategoryBanner
-                catKey={filter}
-                info={categoryInfo[filter]}
-                count={filtered.length}
-              />
-            )}
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {filtered.map((item, i) => (
-                <MenuCard key={item.id} item={item} index={i} />
-              ))}
-            </div>
-          </>
+        {categoryInfo[filter] && (
+          <CategoryBanner
+            catKey={filter}
+            info={categoryInfo[filter]}
+            count={filtered.length}
+          />
         )}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {filtered.map((item, i) => (
+            <MenuCard key={item.id} item={item} index={i} />
+          ))}
+        </div>
       </div>
     </section>
   );
